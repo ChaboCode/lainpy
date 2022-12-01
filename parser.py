@@ -73,8 +73,6 @@ def lex(code):
         return (LEX_SKIP, 0, 1)
 
 def parse_stmt(code):
-    print('<<<lain says>>> Parsing code...')
-
     position = 0
     parse_tree = []
     while True:

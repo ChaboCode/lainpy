@@ -60,7 +60,7 @@ def load_identifier(value):
 
 def load_expression(lexeme, value):
     if not execution['expects'] == EXPR:
-        print('<<lain ERROR>>> Didn\'t expected an expression')
+        print('     <<<lain ERROR>>> Didn\'t expected an expression')
         execution['fail'] = True
 
     if lexeme == LEX_OPERATOR:
@@ -141,10 +141,7 @@ def compute():
 
 
 def execute(parse_tree):
-    print('<<<lain says>>> Exectuing parse tree...')
-
     clean()
-
     for item in parse_tree:
         (lexeme, value) = item
         if lexeme == LEX_OPERATOR or lexeme == LEX_NUMBER:
